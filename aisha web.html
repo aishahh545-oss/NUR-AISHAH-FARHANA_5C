@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Giggle with Aisha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: "Fantasy fonts", serif;
+            margin: 0;
+            padding: 0;
+            background: rgba(40,65,57);
+            color: black;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: rgba(128,144,118);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: width 2s;
+
+        }
+        
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        section {
+            display: none;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            background: #f8d794;
+            ;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            animation: fade in 0.5s ease-out;
+        }
+        section.active {
+            display: block;
+        }
+        h2 {
+            color: rgba(184,104,144);
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .info-item {
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 350px;
+            height: 300px;
+            object-fit: cover;
+            margin: 10px;
+        }
+        .experience ul {
+            list-style: none;
+            padding: 0;
+        }
+        .experience li {
+            background: gray;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 5px rgba(248,231,148);
+            border-radius: 5px;
+        }
+        .content-box {
+              /* Set the box dimensions */
+              width: 70%; 
+              padding: 20px; /* Space inside the box */
+              margin: 10px auto; /* Space outside the box (auto centers it) */
+
+              /* Make it look like a box */
+              border: 1px solid #333; /* A thin border */
+              background-color: #f9f9f9; /* A light background color */
+              border-radius: 8px; /* Rounded corners */
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+        button {
+            background: #111a19;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: white;
+        }
+        button:disabled {
+            background: #111a19;
+            cursor: not-allowed;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #758956;
+            color:black ;
+        }
+
+        .pagination {
+            display: block;
+            padding: 8px 12px;
+            text-decoration: none;
+            border: 1px solid gray;
+            color: black;
+            margin: 0 4px;
+            border-radius: 5px;
+            transition: background-color 1s;
+}
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            .gallery img {
+                width: 300px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="animate__animated animate__fadeInDown">
+        <h1> 🌟🌞Let's Find Out with Aisha 🌳🌼</h1>
+    </header>
+
+    <div class="container">
+        <section id="Homepage">
+            <h2> ⛅Homepage⛅ </h2>
+            <div class= "info-item">
+                <img src="index.jpg" alt="Hi!!!"  border="5px" width="250">
+                <h3> Hi, welcome to Aishah's personal life...</h3>
+                <p> In this website, you guys will know about Aishah' personal life</p>
+            </div>
+        </section>
+
+        <section id="personal" class="active">
+            <h2>⛄Personal Information⛄</h2>
+            <div class="info-item">
+                <img src="this is Aishah.jpg" alt="Profile Photo"  border="5px"  width="250">
+                <img src="me 3.jpg" alt="aisha" border="5px" width="250">
+                <img src="me 2.jpg" alt="aisha too" border="5px" width="250">
+                <h3>Name: Nur Aishah Farhana Binti Mohd Hanapiah</h3>
+                <p>Age: 20</p>
+                <p>Birthday: 22/10/2005</p>
+                <p>Hometown: Kemaman, Terengganu</p>
+                <p>Email: aishahh545@gmail.com</p>
+                <p>Skill: fluency in a secondary language and mastery a unique hobby. I also have an emotional regulation which is ability to remain calm, rational and positivie under high pressure.</p>
+                <p> My goals is to finish my studies before 30s and travel the world with my adult money. In god willing, I want to pursue my study in Phd at age 40s.</p>
+            </div>
+        </section>
+
+        <section id="family">
+            <h2>☘Family☘</h2>
+            <div class="info-item">
+                <img src="fm3.jpg" alt="Family Photo" border="5px" width="250">
+                <h3>My Family</h3>
+                <p>This is my mother and my older brother.</p>
+                <p> My mother is 44 years-old and currently working as managers at her current company.</p>
+                <p> For my brother, he currently working as factory operator at Kemaman after 3 years working at Kuala Lumpur. Before that, my brother study at IKBN Temerloh in Automotive Engineering course. </p> 
+                <img src="crash (1).jpg" alt="image1" border="5px" width="250">
+                <img src="crash (2).jpg" alt="image2" border="5px" width="250">    
+                <p> On 2022, when he got a fatal crash after finish his internship. He on his way back to Kemaman from Kuala Lumpur and got an accident at Temerloh with his bike. The recovery take a solid 2 month before return to the company.</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>✨ Education ✨</h2>
+            <div class="info-item">
+                <img src="edu.3.jpg" alt="spm era..."  border="5px"  width="250">
+                <img src="edu.2.jpg" alt="Eid with classmate" border="5px"  width="250">
+                <h3>For education journey, Aishah's education journey start during 2010, where she went to kindergarten. On 2012, that was a time that reach an age to go to primary school, after 6 years went into primary school, she continue her education journey to secondary school which is take 6 years to finish the school era. Praise to Allah, during her SPM era, she got a nice result and got offer to continue her next journey, it was university era. On 22 September 2023, she got accept into UiTM Kelantan to pursue her diploma's in Information Management course. Time passing by, now she on final year of study and soon she will pursue her next chapter of education journey.  </h3>
+                <p>Kindergarten: Tabika Kemas Kampung Pengkalan Pandan -> 2010 - 2012 </p>
+                <img src="school.jpg" alt="Primary school" border="5px" width="250">
+                <p> Primary school: SK Bukit Mentok -> 2012 - 2017 </p>
+                <p> Secondary school: SMK Bukit Mentok -> 2018 - 2023 </p>
+                <img src="dip 2.jpg" alt="diploma" border="5px" width="250">
+                <p> Diploma: UiTM Kelantan, Faculty Information Science -> 2023 - 2026</p>
+            </div>
+        </section>
+
+        <section id="hobbies">
+            <h2>❆Things Aisha's do during free time❆</h2>
+            <div class="info-item">
+                 <h3>🗻Hiking</h3>
+                <p>⇝I love exploring nature trails and mountains. It's my way to relax and recharge.</p>
+                <img src="hik.jpg" alt="Hiking" border="5px"  width="250">
+                <img src="hik2.jpg" alt= "hiking" border="5px" width="250">
+            
+            </div>
+            <div class="info-item">
+                 <h3>Cafe hunting🍵🌯🍰</h3>
+                <p>⇝I love do cafe hunting because I can try variety kinds of food and drinks that doesn't have at regular restaurant or fodd stall.</p>
+                <img src="matcha2.jpg" alt="Caffe" border="5px" width="250">
+                <img src="matcha.jpg" alt="fav drinks" border="5px" width="250">
+                 <img src="matcha.jpg" alt="fav drinks" border="5px" width="250">
+                <img src="matcha3.jpg" alt="again" border="5px" width="250">
+                <img src="matcha4.jpg" alt="hmm..." border="5px" width="250">
+            </div>
+            <div class="info-item">
+                <h3>Explore a fun activities</h3>
+                <img src="fun act.jpg" alt="Activity" border="5px" width="250">
+                <img src="fun act2.jpg" alt="cycle" border="5px" width="250">
+                <img src="hik3.jpg" alt="track" border="5px" width="250">
+               
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="gall 7.jpg" alt="Diploma moments" border="3px" >
+                <img src="gall.2.jpg" alt="studies moments" border="3px" >
+                <img src="gall 8.jpg" alt=";)" border="3px">
+                <img src="dess.jpg" alt="food" border="3px">
+                <img src="gall.jpg" alt="Image 5" border="3px">
+                <img src="gall 2.jpg" alt="Image 6" border="3px">
+                <img src="gall 3.jpg" alt="image 7" border="3px">
+                <img src="gall 4.jpg" alt="image 8" border="3px">
+                <img src="gall 9.jpg" alt="image 9" border="3px">
+            </div>
+        </section>
+
+      <section id="hobbies">
+            <h2>``~Novel Reviews~`` </h2>
+            <div class="content-box">
+                <img src="fav book4.jpg" alt="Book 1" border="5px"  width="200">
+                <h3>Book 1</h3>
+                <p><strong>Chef's Cuisine by Effalee</p></strong>
+                <p>Rate: 10/10 </p>
+                <p>Reviews:"Chef's Cuisine" is a dramatic Malaysian novel that blends romance, mystery, and thriller elements.
+
+The story follows Dyra Darleen Darissa and her unexpected reunion with Zafrael Aisaar, her mysterious former school "gangster" who has transformed into the powerful owner of a globally renowned restaurant. The central conflict revolves around Dyra's quest for a perfect life versus Zafrael's dark warning: "Don't fall for me. You'll get nothing but disappointment!"</p>
+<p> This story about intense mystery when the plot is driven by Zafreal's secret and a harsh reality that Dyra must uncover by keeping the reader engaged. This book also have a strong protaginist which is whenever Dyra's journey to unveil the truth provides a compelling narrative hook. Beside that, it also giving emotional blend that successfully combines sweet romantic moments with intense conflict and a mysterious tone.
+            </div>
+            
+            <div class="content-box">
+                <img src="fav book8.jpg" alt="Book 3" border="5px" width="200">
+                <h3>Book 2</h3>
+                <p><strong>Introvert by Abstrakim</strong></p>
+                <p>Rate:7.5/10</p>
+                <p>Reviews:"Introvert" by Abstrakim is a deeply emotional and fast-paced novel that centers on Farady, a young man struggling with severe depression and suicidal ideation following a personal tragedy. His life takes an unexpected turn when he meets the mysterious and compassionate Haura.
+
+The book is praised for its strong emotional resonance and its sincere focus on mental health awareness and the journey toward healing through human connection. Readers often describe it as a page-turner with an abundance of unexpected and impactful plot twists, especially in the ending.
+
+However, some critiques point to occasional cliché dialogue and an overly dramatic conclusion that relies heavily on those twists.</p>
+</div>
+    <div class="content-box">
+                <img src="teme book.jpg" alt="Book 4" border="5px" width="200">
+                <h3>Book 3</h3>
+                <p><strong>Empayar: Hikayat Putera tanpa nama by Teme Abdullah </strong></p>
+                <p>Rate:9.5/10</p>
+                <p>Reviews:"Empayar: Hikayat Putera Tanpa Nama" is Teme Abdullah's debut fiction novel and the first book in the Empayar series. It is a highly-rated work of dramatic, post-apocalyptic fantasy set in a reimagined historical Melayu sultanate.
+
+The Core Story
+The novel is set in the Kesultanan Melayu Aradhanapura, where the main setting is the Madrasah Taming Sari, an elite institution for training scholars and warriors. The story focuses on a prince who runs away from the palace and hides his true identity to study at the madrasah, believing his royal lineage is corrupted by black magic or dark practices.
+
+The prince, often referred to only by his training number, is on a quest for the true meaning of power, religion, and justice within a system that appears morally compromised.</p>
+
+<p> In this book, the readers will get a deep thematic content because the central theme is about "religious knowledge is a weapon" it can be used for  immense good or catastrophic evil. This book also have an unique world-building that feature a rare "classic-futuristic" and "religi-fantansy" setting, merging traditional Melayu sultanete imagery with elements of post-apocalypse and advanced learning institutions. It engaging and thought- provoking that many find the prose straightforward and easy to follow, yet the underlying message is deep and uses social commentary to criticize those who missue religion for personal gain.</p>
+
+</div>
+ <div class="content-box">
+                <img src="fav book3.jpg" alt="Book 4" border="5px" width="200">
+                <h3>Book 4</h3>
+                <p><strong>Will you stay by Norhafsah Hamid</strong></p>
+                <p> Rate: 6/10 </p>
+                <p> Reviews: Norhafsah Hamid's Will You Stay? is a heartwarming, faith-infused romance centered on Amy, a young, ambitious surgeon-in-training, and Rasyid, a kind lawyer and hafiz.
+
+The novel beautifully portrays the start of their relationship, focusing on mutual respect and shared faith (often dubbed "halal romance"). However, Amy's happiness is quickly tested by personal trials, forcing her to confront the limits of human love and the necessity of surrender to God.
+
+The book is rich with spiritual reminders and is a great read for those seeking a story that successfully blends contemporary love with deep Islamic reflection. While the writing is sometimes simple, its strong message about choosing faith and resilience in the face of heartbreak makes it an inspiring and emotionally resonant read.
+
+It's a reminder that true love should always lead one closer to the Divine.</p>
+            </div>
+
+<div class="content-box">
+                <img src="hazreal.jpg" alt="Book 4" border="5px" width="200">
+                <h3>Book 5</h3>
+                <p><strong>Hazrael by Harleen</strong></p>
+                <p> Rate: 7.5/10 </p>
+                <p> Reviews: Hazrael by Harleen is an action-packed Malay thriller that expertly mixes crime, mystery, and romance.
+
+The story follows Naina Hijannah, a police investigator struggling with depression, whose life is saved and complicated by the mysterious Neil Hazrael. Forced to care for him after an incident, Naina finds herself relying on this enigmatic figure just as she re-enters an intense investigation involving a genius hacker.
+
+The novel is celebrated for its fast pace, cinematic feel, and compelling plot twists. It constantly questions Hazrael's motives: Is he a hero, or a traitor?
+
+This is a gripping and unique read perfect for those who love strong anti-heroes, complex crime plots, and intense suspense over traditional romance.</p>
+</div>
+
+<div class="content-box">
+                <img src="garam.jpg" alt="Book 6" border="5px" width="200">
+                <h3>Book 6</h3>
+                <p><strong>Misteri Patung Garam by Ruwi Meita</strong></p>
+                <p> Rate: 9.5/10 </p>
+                <p> Reviews: Misteri Patung Garam is a visceral, dark thriller that blends forensic science with biblical symbolism. Set in Surabaya, it follows Inspector Kiri Lamari as he hunts a serial killer who transforms victims into grotesque "salt statues"—surgically altered, posed, and encrusted in salt.</p> 
+
+                <p> This book have a unique concept that insipered by the story of Lot's wife, the salt motif creates a hauntingly poetic atmosphere. It also have noir vibe by making it feels like a cross between Hannibal and classic detective noir. The balance between graphic gore, the book is grounded by witty dialogue and deep psychological themes of trauma and "looking back" at the past.</p>    
+
+        </section>
+
+        <section id="Mood">
+            <h2> Mood🎶🎧 </h2>
+   <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4gP6SPRk7hV1RXhg71xkts?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <iframe data-testid="embed-iframe" 
+        style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/03nRwOD94aCJny6DEHMda4?utm_source=generator"
+         width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+             
+         </iframe>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/771KQpUd9xmobovRwimDGW?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            
+        </section>
+
+        <div class="nav-buttons">
+            <button id="prevBtn" disabled>Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+</div>
+
+    <footer class="animate__animated animate__fadeInUp">
+        <p>&copy; 2025 || aishah farhana || All rights reserved for education purpose.</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentIndex = 0;
+
+        function showSection(index) {
+            sections.forEach((section, i) => {
+                section.classList.toggle('active', i === index);
+            });
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === sections.length - 1;
+            nextBtn.textContent = index === sections.length - 1 ? 'Finish' : 'Next';
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showSection(currentIndex);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < sections.length - 1) {
+                currentIndex++;
+                showSection(currentIndex);
+            }
+        });
+
+        showSection(currentIndex);
+    </script>
+</body>
+</html>
